@@ -16,12 +16,12 @@ void loop() {
   digitalWrite(TRIGGER, LOW);
   long duration = pulseIn(ECHO, HIGH);
   long distance = (duration/2) / 29.1;
-  if (distance < 10) { // if distance is less than 10 cm
+  if (distance < 20) { // if distance is less than 50 cm
     digitalWrite(LED, HIGH);
   } else {
     digitalWrite(LED, LOW);
   }
-  Serial.print(distance);
-  Serial.println(" cm");
+	Serial.print(distance);
+  Serial.println("");
   delay(100);
 }

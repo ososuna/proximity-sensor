@@ -1,11 +1,11 @@
-import { SerialPort } from 'serialport';
+const SerialPort = require('serialport');
 const Readline = SerialPort.parsers.Readline;
 class Serial {  
   constructor() {    
     // Connect to Serial
     this.port = new SerialPort( process.env.ARDUINO_PORT, {
       baudRate: 9600
-    });
+   });
     
     // Delimiter to read the Serial
     this.parser = this.port.pipe( new Readline( { delimiter: '\r\n' }) );
