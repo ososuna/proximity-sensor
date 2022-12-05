@@ -16,7 +16,7 @@ void loop() {
   digitalWrite(TRIGGER, LOW);
   long duration = pulseIn(ECHO, HIGH);
   long distance = (duration/2) / 29.1;
-  if (distance < 20) { // if distance is less than 50 cm
+  if (distance < 20) { // if distance is less than 20 cm
     digitalWrite(LED, HIGH);
   } else {
     digitalWrite(LED, LOW);
